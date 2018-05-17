@@ -4,7 +4,7 @@
 This is a lightweight Docker image with docker, docker-compose, and the latest LTS versions of node and npm.
 
 ## TODOs:
-- [] Investigate starting with a base docker image and install node
+- [ ] Investigate starting with a base docker image and install node
 
 
 ## Example docker-compose.yml 
