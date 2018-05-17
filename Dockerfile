@@ -1,4 +1,6 @@
-FROM node:6.10
+FROM node:8.11
+
+RUN npm i -g npm@6.0.0 && npm update -g npm
 
 RUN set -x \
     && VER="17.03.0-ce" ; curl -L -o /tmp/docker-$VER.tgz https://get.docker.com/builds/Linux/x86_64/docker-$VER.tgz \
