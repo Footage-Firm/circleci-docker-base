@@ -1,8 +1,15 @@
-FROM node:8.11
+FROM node:10
 
-RUN npm i -g npm@6.0.0 && npm update -g npm
+# Install pip (https://github.com/aws/aws-cli/issues/2290)
+RUN apt-get update \
+    && apt-get install -y python-pip libpython-dev
+        
+# Install aws cli.
+RUN pip install awscli
 
+# Get docker.
 RUN curl -s https://get.docker.com | bash -s
 
+# Install docker-compose.
 RUN curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose \
     && chmod +x /usr/local/bin/docker-compose
