@@ -1,12 +1,12 @@
 FROM node:10
 
-# Install pip (https://github.com/aws/aws-cli/issues/2290)
+# zip needed for some circle builds (releasing to Doris)
 RUN apt-get update \
-    && apt-get install -y python-pip libpython-dev
+    && apt-get install --no-install-recommends -y \
+        zip \
+	awscli \
+    && rm -rf /var/lib/apt/lists/*
         
-# Install aws cli.
-RUN pip install awscli
-
 # Get docker.
 RUN curl -s https://get.docker.com | bash -s
 
