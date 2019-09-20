@@ -3,6 +3,9 @@
 # circleci-docker-base
 This is a lightweight Docker image with docker, docker-compose, and the latest LTS versions of node and npm.
 
+## Publishing
+This image auto-builds from source in dockerhub. Pushing a git tag will create an image with that tag in dockerhub, and merging to master will update "latest".
+
 ## TODOs:
 - [ ] Investigate starting with a base docker image and install node
 
