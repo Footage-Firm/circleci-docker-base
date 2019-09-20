@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 IMAGE=videoblocks/circleci-docker-base
-TAG=${1:-"4.1"}
+TAG=${1:-"4.3"}
 
 echo "Building Docker image: [Image: $IMAGE]"
 docker build . -t ${IMAGE}
