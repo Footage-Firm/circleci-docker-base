@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:12
 
 # Install pip (https://github.com/aws/aws-cli/issues/2290)
 RUN apt-get update \
